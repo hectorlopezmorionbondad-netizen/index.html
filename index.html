@@ -1,0 +1,252 @@
+<!DOCTYPE html><html lang="es"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSFiddle kjgL6wb3</title>
+
+  <style>:root { --verde: rgb(0,108,69); --verde-oscuro: rgb(18,60,43); --verde-profundo: rgb(32,40,32); --beige: rgb(216,200,165); --marfil: rgb(237,235,228); --blanco: rgb(255,255,255); --terracota: rgb(168,73,56); --gris: rgb(101,107,101); --borde: rgb(221,217,206); }* { margin: 0; padding: 0; box-sizing: border-box; }html {  }body { background-color: var(--blanco); color: var(--verde-profundo); font-family: "Montserrat", Arial, sans-serif; line-height: 1.7; }img { max-width: 100%; display: block; }a { text-decoration: none; color: inherit; }.contenedor { width: 90%; max-width: 1200px; margin: auto; }.etiqueta { display: inline-block; color: var(--verde); font-size: 0.75rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }.cabecera { background-color: var(--blanco); border: 1px solid var(--borde); top: 0; z-index: 100; }.cabecera-interior { min-height: 90px; display: flex; align-items: center; justify-content: space-between; gap: 25px; }.marca { display: flex; flex-direction: column; line-height: 1.3; flex-shrink: 0; }.marca-nombre { color: var(--verde-oscuro); font: bold 1.55rem Georgia, serif; letter-spacing: 1px; }.marca-subtitulo { color: var(--terracota); font-size: 0.65rem; font-weight: bold; letter-spacing: 2px; margin-top: 5px; }.navegacion { display: flex; align-items: center; gap: 24px; font-size: 0.85rem; font-weight: 700; }.navegacion > a, .menu-mas summary { color: var(--verde-profundo); transition: color 0.3s initial initial; }.navegacion > a:hover, .menu-mas summary:hover, .navegacion .activo { color: var(--verde); }.menu-mas { position: relative; }.menu-mas summary { cursor: pointer; list-style: none; }.menu-mas summary span { margin-left: 4px; }.desplegable { position: absolute; top: 35px; right: 0; min-width: 220px; background: var(--blanco); border: 1px solid var(--borde); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); display: none; flex-direction: column; padding: 10px; border-radius: 5px; }.menu-mas[open] .desplegable { display: flex; }.desplegable a { padding: 10px; color: var(--verde-profundo); font-size: 0.85rem; border-radius: 4px; }.desplegable a:hover { background-color: var(--marfil); color: var(--verde); }.portada { background-color: var(--marfil); padding: 85px 0 85px 0; overflow: hidden; }.portada-contenido { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 55px; }.portada-texto h1 { font-family: Georgia, "Times New Roman", serif; line-height: 1.1; color: var(--verde-oscuro); margin-bottom: 25px; }.lema { color: var(--terracota); font: italic 1.35rem Georgia, serif; margin-bottom: 20px; border: 4px solid var(--beige); padding-left: 18px; }.portada-descripcion { color: var(--gris); max-width: 540px; margin-bottom: 30px; }.boton-principal { display: inline-block; background-color: var(--verde); color: var(--blanco); padding: 13px 25px 13px 25px; border-radius: 3px; font-size: 0.85rem; font-weight: bold; transition: initial 0.3s initial initial; }.boton-principal:hover { background-color: var(--verde-oscuro); transform: translateY(-2px); }.portada-imagenes { display: grid; grid-template-columns: 1.3fr 0.8fr; grid-template-rows: 180px 180px; gap: 12px; transform: rotate(1deg); }.portada-imagenes img { width: 100%; height: 100%; object-fit: cover; border-radius: 5px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.13); }.imagen-blas { grid-area: 1 1 3 initial; }.imagen-bandera { grid-area: 1 2 initial initial; }.imagen-paisaje { grid-area: 2 2 initial initial; }.presentacion { text-align: center; max-width: 850px; padding-top: 85px; padding-bottom: 85px; }.presentacion h2 { font: 2.2rem / 1.25 Georgia, serif; color: var(--verde-oscuro); margin-bottom: 22px; }.presentacion p { color: var(--gris); margin-bottom: 12px; }.seccion { padding: 85px 0 85px 0; }.seccion-historia { background-color: var(--blanco); }.seccion-actividad { background-color: var(--marfil); }.seccion-actualidad { background-color: var(--blanco); }.seccion-instituciones { background-color: var(--marfil); }.encabezado-seccion { max-width: 700px; margin-bottom: 40px; }.encabezado-seccion h2 { color: var(--verde-oscuro); font: 2.5rem / 1.2 Georgia, serif; margin-bottom: 12px; }.encabezado-seccion p { color: var(--gris); }.encabezado-horizontal { max-width: none; display: flex; justify-content: space-between; align-items: end; gap: 20px; }.blas-destacado { display: grid; grid-template-columns: 0.9fr 1.1fr; background-color: var(--verde-oscuro); color: var(--blanco); margin-bottom: 35px; border-radius: 5px; overflow: hidden; }.blas-foto { min-height: 360px; }.blas-foto img { width: 100%; height: 100%; object-fit: cover; }.blas-texto { padding: 50px; align-self: center; }.blas-texto .etiqueta { color: var(--beige); }.blas-texto h3 { font: 2.6rem Georgia, serif; margin-bottom: 15px; }.blas-texto p { color: rgb(229, 232, 227); margin-bottom: 25px; }.enlace-flecha { color: var(--verde); font-weight: bold; font-size: 0.9rem; transition: initial 0.3s initial initial; }.enlace-flecha:hover { color: var(--terracota); }.blas-texto .enlace-flecha { color: var(--beige); }.rejilla-tarjetas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }.tarjeta { background-color: var(--blanco); padding: 30px; border: 1px solid var(--borde); border-radius: 4px; transition-property: transform, box-shadow; transition-duration: 0.3s, 0.3s; }.tarjeta:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); }.tarjeta h3 { color: var(--verde-oscuro); font: 1.45rem / 1.3 Georgia, serif; margin: 12px 0 12px 0; }.tarjeta p { color: var(--gris); font-size: 0.9rem; margin-bottom: 20px; }.tarjeta a { color: var(--verde); font-weight: bold; font-size: 0.85rem; }.tarjeta a:hover { color: var(--terracota); }.numero-tarjeta, .icono-tarjeta { color: var(--terracota); font: bold 1.2rem Georgia, serif; }.tarjeta-verde { border: 4px solid var(--verde); }.rejilla-noticias { display: grid; grid-template-columns: 1.5fr 1fr; grid-template-rows: auto auto; gap: 22px; }.noticia { background-color: var(--blanco); border: 1px solid var(--borde); overflow: hidden; border-radius: 4px; }.noticia-principal { grid-row: 1 3; }.noticia-imagen { height: 190px; overflow: hidden; background-color: var(--marfil); }.noticia-principal .noticia-imagen { height: 270px; }.noticia-imagen img { width: 100%; height: 100%; object-fit: cover; }.noticia-contenido { padding: 24px; }.noticia-contenido h3 { color: var(--verde-oscuro); font: 1.4rem Georgia, serif; margin-bottom: 10px; }.noticia-contenido p { color: var(--gris); font-size: 0.9rem; margin-bottom: 15px; }.noticia-contenido a { color: var(--verde); font-size: 0.85rem; font-weight: bold; }.fuentes { background-color: var(--verde-oscuro); color: var(--blanco); padding: 65px 0 65px 0; }.fuentes-contenido { display: flex; align-items: center; justify-content: space-between; gap: 35px; }.fuentes .etiqueta { color: var(--beige); }.fuentes h2 { font: 2rem Georgia, serif; margin-bottom: 12px; }.fuentes p { color: rgb(224, 230, 223); max-width: 700px; }.boton-secundario { display: inline-block; padding: 13px 20px 13px 20px; border: 1px solid var(--beige); color: var(--blanco); border-radius: 3px; white-space: nowrap; font-size: 0.85rem; font-weight: bold; transition: initial 0.3s initial initial; }.boton-secundario:hover { background-color: var(--beige); color: var(--verde-oscuro); }.pie { background-color: rgb(23, 37, 29); color: var(--blanco); padding: 45px 0 25px 0; }.pie-contenido { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 25px; }.pie-marca { color: var(--beige); font: bold 1.4rem Georgia, serif; }.pie-contenido p { color: rgb(196, 204, 197); font-size: 0.75rem; }.pie-enlaces { display: flex; flex-wrap: wrap; gap: 20px; font-size: 0.85rem; }.pie-enlaces a:hover { color: var(--beige); }.copyright { width: 100%; border-top: 1px solid rgb(64, 80, 68); padding-top: 20px; margin-top: 15px; }@media (max-width: 950px) { .cabecera-interior { flex-direction: column; padding: 18px 0 18px 0; }.navegacion { flex-wrap: wrap; justify-content: center; gap: 16px; }.portada-contenido { gap: 30px; }.rejilla-tarjetas { grid-template-columns: repeat(2, 1fr); }.fuentes-contenido { align-items: flex-start; flex-direction: column; } }@media (max-width: 650px) { .contenedor { width: 92%; }.cabecera-interior { gap: 15px; }.marca-nombre { font-size: 1.3rem; }.navegacion { gap: 12px; font-size: 0.75rem; }.portada { padding: 55px 0 55px 0; }.portada-contenido { grid-template-columns: 1fr; }.portada-texto h1 { font-size: 2.8rem; }.portada-imagenes { grid-template-rows: 140px 140px; }.presentacion { padding-top: 60px; padding-bottom: 60px; }.presentacion h2 { font-size: 1.8rem; }.seccion { padding: 60px 0 60px 0; }.encabezado-seccion h2 { font-size: 2rem; }.blas-destacado { grid-template-columns: 1fr; }.blas-foto { min-height: 280px; height: 280px; }.blas-texto { padding: 30px; }.blas-texto h3 { font-size: 2.1rem; }.rejilla-tarjetas { grid-template-columns: 1fr; }.rejilla-noticias { grid-template-columns: 1fr; }.noticia-principal { grid-row: auto; }.encabezado-horizontal { align-items: flex-start; flex-direction: column; }.fuentes h2 { font-size: 1.7rem; }.pie-contenido { flex-direction: column; align-items: flex-start; }.pie-enlaces { gap: 15px; } }</style>
+
+  
+</head>
+<body>
+  
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Voz de Andalucía: historia, identidad, memoria y autogobierno andaluz.">
+    <title>La Voz de Andalucía | Memoria, identidad y autogobierno</title>
+    <link rel="stylesheet" href="estilos.css">
+
+
+
+
+    <!-- CABECERA -->
+    <header class="cabecera">
+        <div class="contenedor cabecera-interior">
+            <a href="https://jsfiddle.net/Hectordqe/kjgL6wb3/1/show/" class="marca">
+                <span class="marca-nombre">LA VOZ DE ANDALUCÍA</span>
+                <span class="marca-subtitulo">MEMORIA · IDENTIDAD · AUTOGOBIERNO</span>
+            </a>
+
+            <nav class="navegacion">
+                <a href="https://jsfiddle.net/Hectordqe/kjgL6wb3/1/show/" class="activo">Inicio</a>
+                <a href="https://jsfiddle.net/Hectordqe/nv2j3L9x/7/show/" target="_blank" rel="noopener noreferrer">Blas Infante</a>
+                <a href="https://jsfiddle.net/Hectordqe/kd9o62eq/1/show/" target="_blank" rel="noopener noreferrer">Memoria histórica</a>
+                <a href="https://jsfiddle.net/Hectordqe/yLkrcmtf/1/show/" target="_blank" rel="noopener noreferrer">Autogobierno</a>
+                <a href="https://jsfiddle.net/Hectordqe/sLt5jenu/13/show/" target="_blank" rel="noopener noreferrer">¿Quién ayuda realmente a Andalucía?</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- PORTADA PRINCIPAL -->
+        <section class="portada">
+            <div class="contenedor portada-contenido">
+
+                <div class="portada-texto">
+                    <span class="etiqueta">UNA MIRADA A NUESTRA TIERRA</span>
+
+                    <h1>Andalucía merece conocerse desde dentro.</h1>
+
+                    <p class="lema">
+                        «Andalucía no se explica desde fuera.
+                        Se conoce desde dentro».
+                    </p>
+
+                    <p class="portada-descripcion">
+                        Un espacio dedicado a nuestra historia, nuestra
+                        identidad, nuestro autogobierno y las decisiones
+                        que afectan al presente y al futuro de Andalucía.
+                    </p>
+
+                    <a href="#secciones" class="boton-principal">
+                        Descubre Andalucía
+                    </a>
+                </div>
+
+                <div class="portada-imagenes">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Photo_of_Blas_Infante.jpg" alt="Retrato de Blas Infante" class="imagen-blas">
+
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Andalusia.svg" alt="Bandera de Andalucía" class="imagen-bandera">
+
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/View_of_the_Sierra_Nevada_mountains_from_Granada.jpg" alt="Paisaje de Andalucía" class="imagen-paisaje">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PRESENTACIÓN -->
+        <section class="presentacion contenedor">
+            <span class="etiqueta">NUESTRO PROYECTO</span>
+
+            <h2>Conocer Andalucía es también comprenderla.</h2>
+
+            <p>
+                La Voz de Andalucía nace como un espacio de información,
+                memoria y documentación. Queremos acercar a los andaluces
+                su historia, su identidad y las decisiones que marcan
+                el rumbo de nuestra tierra.
+            </p>
+
+            <p>
+                Un proyecto para consultar, investigar y contrastar
+                información mediante documentos y fuentes verificables.
+            </p>
+        </section>
+
+        <!-- SECCIONES PRINCIPALES -->
+        <section class="seccion seccion-historia" id="secciones">
+            <div class="contenedor">
+
+                <div class="encabezado-seccion">
+                    <span class="etiqueta">NUESTRAS SECCIONES</span>
+
+                    <h2>Conoce Andalucía</h2>
+
+                    <p>
+                        Historia, memoria, autogobierno y análisis
+                        de las decisiones políticas que afectan a nuestra tierra.
+                    </p>
+                </div>
+
+                <div class="rejilla-tarjetas">
+
+                    <!-- BLAS INFANTE -->
+                    <article class="tarjeta">
+                        <span class="numero-tarjeta">01</span>
+
+                        <h3>Blas Infante</h3>
+
+                        <p>
+                            Conoce su vida, su pensamiento y su legado
+                            en la construcción de la identidad andaluza.
+                        </p>
+
+                        <a href="https://jsfiddle.net/Hectordqe/nv2j3L9x/7/show/" target="_blank" rel="noopener noreferrer">
+                            Conocer su historia →
+                        </a>
+                    </article>
+
+                    <!-- MEMORIA HISTÓRICA -->
+                    <article class="tarjeta">
+                        <span class="numero-tarjeta">02</span>
+
+                        <h3>Memoria histórica andaluza</h3>
+
+                        <p>
+                            Nuestro pasado, los acontecimientos históricos
+                            y la recuperación de la memoria.
+                        </p>
+
+                        <a href="https://jsfiddle.net/Hectordqe/kd9o62eq/1/show/" target="_blank" rel="noopener noreferrer">
+                            Explorar sección →
+                        </a>
+                    </article>
+
+                    <!-- AUTOGOBIERNO -->
+                    <article class="tarjeta">
+                        <span class="numero-tarjeta">03</span>
+
+                        <h3>Autogobierno andaluz</h3>
+
+                        <p>
+                            El camino hacia la autonomía y la capacidad
+                            de Andalucía para decidir sobre su futuro.
+                        </p>
+
+                        <a href="https://jsfiddle.net/Hectordqe/yLkrcmtf/1/show/" target="_blank" rel="noopener noreferrer">
+                            Explorar sección →
+                        </a>
+                    </article>
+
+                    <!-- VOTACIONES -->
+                    <article class="tarjeta tarjeta-verde">
+                        <span class="numero-tarjeta">04</span>
+
+                        <h3>¿Quién ayuda realmente a Andalucía?</h3>
+
+                        <p>
+                            Consulta las votaciones parlamentarias y conoce
+                            la posición de los distintos grupos políticos.
+                        </p>
+
+                        <a href="https://jsfiddle.net/Hectordqe/sLt5jenu/13/show/" target="_blank" rel="noopener noreferrer">
+                            Consultar votaciones →
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CRÉDITOS DE LAS IMÁGENES -->
+    <section class="creditos-imagenes" style="padding: 24px 6% 24px 6%; background: rgb(237, 235, 228); color: rgb(32, 40, 32); font-size: 0.85rem; line-height: 1.7;">
+
+        <h2 style="font-size: 1rem; margin: 0 0 8px 0;">
+            Créditos de las imágenes
+        </h2>
+
+        <p style="margin: 0;">
+            Blas Infante: autor desconocido, fotografía en dominio público
+            (<a href="https://commons.wikimedia.org/wiki/File:Photo_of_Blas_Infante.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>).
+
+            Bandera andaluza: IgnisFatuus, dominio público
+            (<a href="https://commons.wikimedia.org/wiki/File:Flag_of_Andalusia.svg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>).
+
+            Sierra Nevada: Jordan Beard, licencia CC BY-SA 3.0
+            (<a href="https://commons.wikimedia.org/wiki/File:View_of_the_Sierra_Nevada_mountains_from_Granada.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>).
+        </p>
+
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie">
+        <div class="contenedor pie-contenido">
+
+            <div>
+                <a href="https://jsfiddle.net/Hectordqe/kjgL6wb3/1/show/" class="pie-marca">
+                    LA VOZ DE ANDALUCÍA
+                </a>
+
+                <p>MEMORIA · IDENTIDAD · AUTOGOBIERNO</p>
+            </div>
+
+            <div class="pie-enlaces">
+                <a href="https://jsfiddle.net/Hectordqe/kjgL6wb3/1/show/">Inicio</a>
+
+                <a href="https://jsfiddle.net/Hectordqe/nv2j3L9x/7/show/" target="_blank" rel="noopener noreferrer">
+                    Blas Infante
+                </a>
+
+                <a href="https://jsfiddle.net/Hectordqe/kd9o62eq/1/show/" target="_blank" rel="noopener noreferrer">
+                    Memoria histórica
+                </a>
+
+                <a href="https://jsfiddle.net/Hectordqe/yLkrcmtf/1/show/" target="_blank" rel="noopener noreferrer">
+                    Autogobierno
+                </a>
+
+                <a href="https://jsfiddle.net/Hectordqe/sLt5jenu/13/show/" target="_blank" rel="noopener noreferrer">
+                    ¿Quién ayuda realmente a Andalucía?
+                </a>
+            </div>
+
+            <p class="copyright">
+                © La Voz de Andalucía. Proyecto de información y documentación.
+            </p>
+
+        </div>
+    </footer>
+
+
+
+
+  <script>
+    
+  </script>
+
+
+</body></html>
